@@ -137,31 +137,55 @@ def register_ui():
             except requests.exceptions.RequestException:
                 st.error("⚠️ Server unreachable. Please try again later.")
 
+def reset_password_ui():
+    admin_sidebar()
+    st.title("🔒 Reset User Password")
 
+    username = st.text_input("Enter Username")
+    new_password = st.text_input("New Password", type="password")
+    confirm_password = st.text_input("Confirm New Password", type="password")
 
-# def login_ui():
-#     st.title("🔐 Login")
+    # Style the button
+    st.markdown("""
+        <style>
+        div.stButton > button {
+            background-color: #ffb703;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 10px;
+        }
+        div.stButton > button:hover {
+            background-color: #faa307;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
-#     username = st.text_input("Username")
-#     password = st.text_input("Password", type="password")
-
-#     if st.button("Login"):
-#         try:
-#             response = requests.get(f"{API_URL}/login", auth=HTTPBasicAuth(username, password))
-#             if response.status_code == 200:
-#                 data = response.json()
-#                 st.session_state.logged_in = True
-#                 st.session_state.username = username
-#                 st.session_state.password = password
-#                 st.session_state.role = data["role"]
-#                 st.session_state.name = data["name"]
-#                 st.session_state.is_admin = data.get("is_admin", False)  # <-- add this
-#                 st.rerun()
-#             else:
-#                 st.error("Invalid username or password.")
-#         except requests.exceptions.RequestException:
-#             st.error("⚠️ Server unreachable. Please try again later.")
-
+    if st.button("Reset Password"):
+        if not username or not new_password or not confirm_password:
+            st.warning("Please fill all fields.")
+        elif new_password != confirm_password:
+            st.warning("Passwords do not match.")
+        else:
+            try:
+                response = requests.post(
+                    f"{API_URL}/reset_password",
+                    json={
+                        "username": username,
+                        "new_password": new_password
+                    },
+                    auth=HTTPBasicAuth(st.session_state.username, st.session_state.password)
+                )
+                if response.status_code == 200:
+                    st.success("✅ Password reset successfully.")
+                elif response.status_code == 404:
+                    st.error("❌ User not found.")
+                else:
+                    st.error("⚠️ Failed to reset password.")
+            except requests.exceptions.RequestException as e:
+                st.error(f"⚠️ Server unreachable. {e}")
 
 
 def add_role_ui():
@@ -405,10 +429,10 @@ def main():
         with st.sidebar:
             if st.session_state.is_admin:
                 selected_page = st.radio(
-                    "Go to",
-                    ["💬 Chat", "📝 Register", "👤➕ Add Role", "📂 Upload Docs"],
-                    key="selected_page"
-                )
+                                "Go to",
+                                ["💬 Chat", "📝 Register", "👤➕ Add Role", "📂 Upload Docs", "🔒 Reset Password"],
+                                key="selected_page"
+                            )
 
             else:
                 selected_page = "💬 Chat"  # force chat only
@@ -423,6 +447,8 @@ def main():
             add_role_ui()
         elif selected_page == "📂 Upload Docs" and st.session_state.is_admin:
             add_docs_role_ui()
+        elif selected_page == "🔒 Reset Password" and st.session_state.is_admin:
+            reset_password_ui()
         else:
             st.error("Access denied.")
 
