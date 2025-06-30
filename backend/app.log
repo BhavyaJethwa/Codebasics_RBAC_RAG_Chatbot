@@ -1,0 +1,200 @@
+2025-06-30 15:37:27 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 15:40:48 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 15:41:15 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 15:42:57 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 15:48:02 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, User Query: Aadhya patel salary
+2025-06-30 15:48:04 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 15:48:04 INFO VectorDB for human_resource fetched - success
+2025-06-30 15:48:04 INFO Retriever for human_resource fetched - success
+2025-06-30 15:48:07 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, AI Response: Aadhya Patel's salary is \u20b91,332,478.37. If you need any further information, feel free to ask!
+2025-06-30 15:48:21 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, User Query: Total sick leaves
+2025-06-30 15:48:21 INFO VectorDB for human_resource fetched - success
+2025-06-30 15:48:21 INFO Retriever for human_resource fetched - success
+2025-06-30 15:48:25 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, AI Response: Could you please clarify which employee's total sick leave you are referring to?
+2025-06-30 15:49:23 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, User Query: what is her date of birth?
+2025-06-30 15:49:24 INFO VectorDB for human_resource fetched - success
+2025-06-30 15:49:24 INFO Retriever for human_resource fetched - success
+2025-06-30 15:49:27 INFO session_id: f7686d89-09d8-4667-afc4-c60eec5024cf, AI Response: Aadhya Patel's date of birth is April 3, 1991. If you have any more questions, feel free to ask!
+2025-06-30 15:54:41 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What is aadhya patel salary
+2025-06-30 15:54:42 INFO VectorDB for executive fetched - success
+2025-06-30 15:54:42 INFO Retriever for executive fetched - success
+2025-06-30 15:54:44 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: Aadhya Patel's salary is \u20b91,332,478.37.
+2025-06-30 15:55:01 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What is her Date of birth
+2025-06-30 15:55:01 INFO VectorDB for executive fetched - success
+2025-06-30 15:55:01 INFO Retriever for executive fetched - success
+2025-06-30 15:55:04 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: Aadhya Patel's date of birth is April 3, 1991.
+2025-06-30 15:55:17 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What are the types of leaves ?
+2025-06-30 15:55:18 INFO VectorDB for executive fetched - success
+2025-06-30 15:55:18 INFO Retriever for executive fetched - success
+2025-06-30 15:55:23 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The types of leave available are:
+
+1. **Privilege/Annual Leave**: 15-21 days/year (as per state Shops & Establishments Act); accrued monthly.
+2. **Sick Leave**: 12 days/year (non-cumulative; medical certificate required for more than 2 days).
+3. **Casual Leave**: 7 days/year (state-specific).
+4. **Maternity Leave**: 26 weeks for the first two children; 12 weeks for subsequent children.
+5. **Paternity Leave**: 7-15 days (company policy; not statutory).
+6. **Bereavement Leave**: 3-7 days for immediate family (company policy).
+7. **Compensatory Off**: For work on holidays/weekends (manager approval required).
+8. **Public Holidays**: 10-14 days/year (as per company calendar and state notifications).
+9. **Leave Without Pay**: Allowed with approval after exhausting paid leave. 
+
+If you have any more questions or need further details, feel free to ask!
+2025-06-30 15:56:00 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What is the application process for it 
+2025-06-30 15:56:01 INFO VectorDB for executive fetched - success
+2025-06-30 15:56:01 INFO Retriever for executive fetched - success
+2025-06-30 15:56:06 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The application process for leave is as follows:
+
+1. **Apply via HRMS/Leave Portal**: Submit your leave request at least 3 days in advance, except in emergencies.
+   
+2. **Medical Certificate**: If you are taking sick leave for more than 2 days, a medical certificate is required.
+
+3. **Emergency Leave**: If you need emergency leave, communicate with your manager or HR as soon as possible.
+
+4. **Approval Required**: All leave requests must be approved by your reporting manager and HR.
+
+5. **Check Leave Balance**: You can view your leave balance on the HRMS portal before applying.
+
+If you need further clarification or assistance, feel free to ask!
+2025-06-30 15:56:31 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What is the public holiday policy
+2025-06-30 15:56:32 INFO VectorDB for executive fetched - success
+2025-06-30 15:56:32 INFO Retriever for executive fetched - success
+2025-06-30 15:56:44 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The public holiday policy includes the following key points:
+
+1. **Annual Holiday List**: An annual holiday list is circulated at the start of each year. 
+
+2. **Types of Holidays**: The list includes national holidays (such as Republic Day, Independence Day, and Gandhi Jayanti), festival holidays, and restricted holidays.
+
+3. **Restricted Holidays**: Employees can choose restricted holidays based on their personal preference.
+
+If you have any more specific questions about the public holiday policy, feel free to ask!
+2025-06-30 15:57:24 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: Can you give me the high level architecture of the application?
+2025-06-30 15:57:25 INFO VectorDB for executive fetched - success
+2025-06-30 15:57:25 INFO Retriever for executive fetched - success
+2025-06-30 15:57:30 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: Certainly! The high-level architecture of the application is as follows:
+
+```
+[Client Apps]
+  \u251c\u2500\u2500 Mobile Apps (iOS, Android)
+  \u251c\u2500\u2500 Web App (React)
+  \u2514\u2500\u2500 APIs (REST, GraphQL)
+
+[API Gateway]
+  \u2514\u2500\u2500 AWS API Gateway (Routing, Authentication, Rate Limiting)
+
+[Microservices Layer]
+  \u251c\u2500\u2500 Authentication Service (OAuth 2.0, JWT)
+  \u251c\u2500\u2500 Payment Processing Service
+  \u251c\u2500\u2500 Wealth Management Service
+  \u251c\u2500\u2500 Analytics Service
+  \u2514\u2500\u2500 Notification Service
+
+[Data Layer]
+  \u251c\u2500\u2500 PostgreSQL (Transactional Data)
+  \u251c\u2500\u2500 MongoDB (User Profiles, Metadata)
+  \u251c\u2500\u2500 Redis (Caching, Session Management)
+  \u2514\u2500\u2500 Amazon S3 (Documents, Backups)
+
+[Infrastructure]
+  \u251c\u2500\u2500 AWS (EC2, ECS, Lambda)
+  \u251c\u2500\u2500 Kubernetes (Orchestration)
+  \u2514\u2500\u2500 Cloudflare (CDN, DDoS Protection)
+```
+
+This architecture is designed to be scalable, resilient, and secure, leveraging a microservices-based, cloud-native approach. If you need more details about any specific component, feel free to ask!
+2025-06-30 15:58:27 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: Can you give me data layer components
+2025-06-30 15:58:28 INFO VectorDB for executive fetched - success
+2025-06-30 15:58:28 INFO Retriever for executive fetched - success
+2025-06-30 15:58:36 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The data layer components of the application include:
+
+1. **PostgreSQL**: 
+   - Primary relational database for transactional data.
+   - Ensures ACID compliance for reliable transactions.
+
+2. **MongoDB**: 
+   - NoSQL database that stores user profiles, preferences, and semi-structured data.
+   - Provides flexibility for handling various data formats.
+
+3. **Redis**: 
+   - In-memory data store used for caching and session management.
+   - Supports pub/sub messaging between microservices.
+
+4. **Amazon S3**: 
+   - Object storage service for storing documents, statements, user uploads, and encrypted backups.
+   - Scalability and durability for large data storage needs.
+
+If you have further questions or need more details about any specific component, feel free to ask!
+2025-06-30 15:59:09 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What are the primary drivers of expense in 2024
+2025-06-30 15:59:10 INFO VectorDB for executive fetched - success
+2025-06-30 15:59:10 INFO Retriever for executive fetched - success
+2025-06-30 15:59:18 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The primary drivers of expense in 2024 were:
+
+1. **Vendor Services**: Totaling $30 million, an 18% increase from the previous year, with major contributors including:
+   - **Marketing-related expenses**: 40% of vendor services.
+   - **Training and education expenses**: 30% of vendor services.
+   - **Software subscriptions**: 25% of vendor services.
+   - **Other miscellaneous expenses**: 5% of vendor services.
+
+2. **Software Subscriptions**: A significant expense of $25 million, up 22% from 2023, reflecting a heavy reliance on cloud-based tools and SaaS subscriptions.
+
+3. **Employee Benefits and HR Costs**: Increased by 10% due to growth in headcount, involving expenses related to benefits, recruitment, and training.
+
+These categories highlight the areas where expenses are concentrated and provide insight into potential cost management opportunities. If you have any further questions or need more details, feel free to ask!
+2025-06-30 16:00:07 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: what was Q3 2024 revenue?
+2025-06-30 16:00:08 INFO VectorDB for executive fetched - success
+2025-06-30 16:00:08 INFO Retriever for executive fetched - success
+2025-06-30 16:00:11 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The revenue for Q3 2024 was $2.4 billion, representing a 30% increase year-over-year.
+2025-06-30 16:00:25 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: What was the gross margin?
+2025-06-30 16:00:25 INFO VectorDB for executive fetched - success
+2025-06-30 16:00:25 INFO Retriever for executive fetched - success
+2025-06-30 16:00:28 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The gross margin for Q3 2024 was 62%.
+2025-06-30 16:01:04 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: what was 2024 total marketing budget?
+2025-06-30 16:01:04 INFO VectorDB for executive fetched - success
+2025-06-30 16:01:04 INFO Retriever for executive fetched - success
+2025-06-30 16:01:07 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The total marketing budget for 2024 was $15 million.
+2025-06-30 16:01:25 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, User Query: How was it allocated?
+2025-06-30 16:01:25 INFO VectorDB for executive fetched - success
+2025-06-30 16:01:25 INFO Retriever for executive fetched - success
+2025-06-30 16:01:31 INFO session_id: dff1cc6d-ea68-4bdf-981c-378c21398552, AI Response: The $15 million marketing budget for 2024 was allocated as follows:
+
+1. **Digital Marketing**: $7 million (47%) – Focused on paid ads, influencer campaigns, and digital content.
+2. **Event Marketing**: $3 million (20%) – Sponsorships, event organization, and travel.
+3. **Public Relations and Brand Awareness**: $2 million (13%) – Press releases, media engagements, and sponsorships.
+4. **Customer Retention**: $1 million (7%) – Email marketing, customer loyalty programs, and CRM tools.
+5. **Market Research and Analytics**: $2 million (13%) – Market research, surveys, and customer analytics.
+2025-06-30 16:04:44 INFO other3 found. Updating vectorstore.
+2025-06-30 16:04:47 INFO Updated vector store for other3 - success
+2025-06-30 16:04:47 INFO Updating Executive vectorstore
+2025-06-30 16:04:49 INFO Executive vectorstore updated successfully
+2025-06-30 16:06:19 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, User Query: Can you give me components of data layer?
+2025-06-30 16:06:20 INFO VectorDB for other3 fetched - success
+2025-06-30 16:06:20 INFO Retriever for other3 fetched - success
+2025-06-30 16:06:25 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, AI Response: Sure! The components of the data layer include:
+
+1. **PostgreSQL**: This is the primary relational database used for transactional data that requires ACID compliance.
+
+2. **MongoDB**: A NoSQL database used to store user profiles, preferences, and semi-structured data.
+
+3. **Redis**: An in-memory data store that serves multiple purposes such as caching, session management, and pub/sub messaging between services.
+
+4. **Amazon S3**: Object storage utilized for documents, statements, user uploads, and encrypted backups.
+2025-06-30 16:06:38 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, User Query: Aadhya patel salary
+2025-06-30 16:06:38 INFO VectorDB for other3 fetched - success
+2025-06-30 16:06:38 INFO Retriever for other3 fetched - success
+2025-06-30 16:06:42 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, AI Response: Aadhya Patel, the Sales Manager, has a salary of \u20b91,332,478.37. If you need more information or details about her role, feel free to ask!
+2025-06-30 16:07:02 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, User Query: Total sick leaves>
+2025-06-30 16:07:02 INFO VectorDB for other3 fetched - success
+2025-06-30 16:07:02 INFO Retriever for other3 fetched - success
+2025-06-30 16:07:05 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, AI Response: Could you please clarify if you are asking for the total sick leave balance for a specific employee or for all employees?
+2025-06-30 16:07:15 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, User Query: for all
+2025-06-30 16:07:15 INFO VectorDB for other3 fetched - success
+2025-06-30 16:07:15 INFO Retriever for other3 fetched - success
+2025-06-30 16:07:19 INFO session_id: bf923483-e478-45ac-808d-acc1035fcab9, AI Response: The total sick leave balance for each employee is as follows:
+
+1. **Saanvi Chowdhury**: 5 leaves remaining
+2. **Saanvi Bhat**: 2 leaves remaining
+3. **Sai Khan**: 9 leaves remaining
+4. **Sai Sharma**: 24 leaves remaining
+5. **Saanvi Bhat (Risk Analyst)**: 8 leaves remaining
+
+If you need the total combined sick leave for all these employees, it would be 48 sick leaves remaining in total. Please let me know if you need further details!
+2025-06-30 16:38:45 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
