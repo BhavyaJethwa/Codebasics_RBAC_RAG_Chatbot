@@ -198,3 +198,188 @@ These categories highlight the areas where expenses are concentrated and provide
 
 If you need the total combined sick leave for all these employees, it would be 48 sick leaves remaining in total. Please let me know if you need further details!
 2025-06-30 16:38:45 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 17:23:38 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 17:27:34 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, User Query: Total sick leaves in a year
+2025-06-30 17:27:38 INFO Getting Executive retriever
+2025-06-30 17:27:40 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 17:27:42 INFO VectorDB for executive fetched - success
+2025-06-30 17:27:42 INFO Retriever for executive fetched - success
+2025-06-30 17:27:47 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, AI Response: Employees are entitled to 12 days of sick leave per year. However, sick leave is non-cumulative, and a medical certificate is required for leave taken for more than 2 consecutive days.
+2025-06-30 17:28:06 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, User Query: Q2 2024 revenue 
+2025-06-30 17:28:06 INFO Getting Executive retriever
+2025-06-30 17:28:10 INFO VectorDB for executive fetched - success
+2025-06-30 17:28:10 INFO Retriever for executive fetched - success
+2025-06-30 17:28:13 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, AI Response: The revenue for Q2 2024 was $2.3 billion, representing a 25% year-over-year increase, driven by strong performance in existing markets and early traction in Southeast Asia.
+2025-06-30 17:28:36 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, User Query: and gross profit
+2025-06-30 17:28:36 INFO Getting Executive retriever
+2025-06-30 17:28:39 INFO VectorDB for executive fetched - success
+2025-06-30 17:28:39 INFO Retriever for executive fetched - success
+2025-06-30 17:28:42 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, AI Response: The gross profit for Q2 2024 was $1.38 billion, calculated by applying the gross margin of 60% to the revenue of $2.3 billion.
+2025-06-30 17:29:48 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, User Query: In 2024, the total marketing budget was how much ?
+2025-06-30 17:29:48 INFO Getting Executive retriever
+2025-06-30 17:29:51 INFO VectorDB for executive fetched - success
+2025-06-30 17:29:51 INFO Retriever for executive fetched - success
+2025-06-30 17:29:54 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, AI Response: In 2024, the total marketing budget was $15 million.
+2025-06-30 17:30:07 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, User Query: How is it allocated?
+2025-06-30 17:30:07 INFO Getting Executive retriever
+2025-06-30 17:30:10 INFO VectorDB for executive fetched - success
+2025-06-30 17:30:10 INFO Retriever for executive fetched - success
+2025-06-30 17:30:16 INFO session_id: 0ec1188a-803e-474e-9200-a7b246b9682a, AI Response: The $15 million marketing budget for 2024 was allocated as follows:
+
+1. **Digital Marketing**: $7 million (47%) – Focused on paid ads, influencer campaigns, and digital content.
+2. **Event Marketing**: $3 million (20%) – For sponsorships, event organization, and travel.
+3. **Public Relations and Brand Awareness**: $2 million (13%) – Including press releases, media engagements, and sponsorships.
+4. **Customer Retention**: $1 million (7%) – For email marketing, customer loyalty programs, and CRM tools.
+5. **Market Research and Analytics**: $2 million (13%) – Covering market research, surveys, and customer analytics.
+2025-06-30 19:13:51 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 19:28:35 INFO session_id: a3c76f99-1bc7-423f-967d-d2b004b1fde7, User Query: Aadhya patel salary
+2025-06-30 19:28:39 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-30 19:28:40 INFO VectorDB for human_resource fetched - success
+2025-06-30 19:28:40 INFO Retriever for human_resource fetched - success
+2025-06-30 19:28:50 INFO session_id: a3c76f99-1bc7-423f-967d-d2b004b1fde7, AI Response: Aadhya Patel's salary is \u20b91,332,478.37.
+2025-06-30 19:28:55 INFO session_id: a3c76f99-1bc7-423f-967d-d2b004b1fde7, User Query: What is her Date of birth?
+2025-06-30 19:28:57 INFO VectorDB for human_resource fetched - success
+2025-06-30 19:28:57 INFO Retriever for human_resource fetched - success
+2025-06-30 19:29:01 INFO session_id: a3c76f99-1bc7-423f-967d-d2b004b1fde7, AI Response: Aadhya Patel's date of birth is April 3, 1991.
+2025-06-30 19:29:37 INFO session_id: ce287b91-926a-4bc0-866d-c2b01a82fbdc, User Query: give me high level architecture
+2025-06-30 19:29:39 INFO VectorDB for engineering fetched - success
+2025-06-30 19:29:39 INFO Retriever for engineering fetched - success
+2025-06-30 19:29:45 INFO session_id: ce287b91-926a-4bc0-866d-c2b01a82fbdc, AI Response: The high-level architecture of FinSolve is structured as follows:
+
+```
+[Client Apps]
+  \u251c\u2500\u2500 Mobile Apps (iOS, Android)
+  \u251c\u2500\u2500 Web App (React)
+  \u2514\u2500\u2500 APIs (REST, GraphQL)
+
+[API Gateway]
+  \u2514\u2500\u2500 AWS API Gateway (Routing, Authentication, Rate Limiting)
+
+[Microservices Layer]
+  \u251c\u2500\u2500 Authentication Service (OAuth 2.0, JWT)
+  \u251c\u2500\u2500 Payment Processing Service
+  \u251c\u2500\u2500 Wealth Management Service
+  \u251c\u2500\u2500 Analytics Service
+  \u2514\u2500\u2500 Notification Service
+
+[Data Layer]
+  \u251c\u2500\u2500 PostgreSQL (Transactional Data)
+  \u251c\u2500\u2500 MongoDB (User Profiles, Metadata)
+  \u251c\u2500\u2500 Redis (Caching, Session Management)
+  \u2514\u2500\u2500 Amazon S3 (Documents, Backups)
+
+[Infrastructure]
+  \u251c\u2500\u2500 AWS (EC2, ECS, Lambda)
+  \u251c\u2500\u2500 Kubernetes (Orchestration)
+  \u2514\u2500\u2500 Cloudflare (CDN, DDoS Protection)
+```
+
+This architecture showcases a microservices-based, cloud-native design that emphasizes scalability, resilience, and security.
+2025-06-30 19:30:02 INFO session_id: ce287b91-926a-4bc0-866d-c2b01a82fbdc, User Query: What are the data layer components here?
+2025-06-30 19:30:04 INFO VectorDB for engineering fetched - success
+2025-06-30 19:30:04 INFO Retriever for engineering fetched - success
+2025-06-30 19:30:07 INFO session_id: ce287b91-926a-4bc0-866d-c2b01a82fbdc, AI Response: The data layer components of FinSolve include:
+
+1. **PostgreSQL**: This is the primary relational database used for transactional data that requires ACID compliance.
+
+2. **MongoDB**: A NoSQL database that stores user profiles, preferences, and semi-structured data.
+
+3. **Redis**: An in-memory data store utilized for caching, session management, and pub/sub messaging between services.
+
+4. **Amazon S3**: Object storage used for documents, statements, user uploads, and encrypted backups.
+2025-06-30 19:30:46 INFO session_id: fcc9ff85-3edc-494f-aa62-a8776d7378d3, User Query: Total sick leaves 
+2025-06-30 19:30:48 INFO VectorDB for employee fetched - success
+2025-06-30 19:30:48 INFO Retriever for employee fetched - success
+2025-06-30 19:30:51 INFO session_id: fcc9ff85-3edc-494f-aa62-a8776d7378d3, AI Response: Employees are entitled to 12 days of sick leave per year, which is non-cumulative. If you need any further details or clarification, please let me know!
+2025-06-30 19:31:00 INFO session_id: fcc9ff85-3edc-494f-aa62-a8776d7378d3, User Query: public holiday policy
+2025-06-30 19:31:02 INFO VectorDB for employee fetched - success
+2025-06-30 19:31:02 INFO Retriever for employee fetched - success
+2025-06-30 19:31:05 INFO session_id: fcc9ff85-3edc-494f-aa62-a8776d7378d3, AI Response: The public holiday policy includes the following key points:
+
+- An annual holiday list is circulated at the start of each year.
+- The list includes national holidays (like Republic Day, Independence Day, and Gandhi Jayanti), festival holidays, and restricted holidays.
+- Employees may choose restricted holidays based on their personal preferences.
+
+If you have any specific questions about public holidays or need further clarification, feel free to ask!
+2025-06-30 19:32:25 INFO session_id: 75212d29-8fbb-43f2-9fc7-93db67a358d9, User Query: 2024 marketing budget
+2025-06-30 19:32:28 INFO VectorDB for marketing fetched - success
+2025-06-30 19:32:28 INFO Retriever for marketing fetched - success
+2025-06-30 19:32:35 INFO session_id: 75212d29-8fbb-43f2-9fc7-93db67a358d9, AI Response: In 2024, the total marketing budget was $15 million, broken down as follows:
+
+1. **Digital Marketing**: $7 million (47%) – Focused on paid ads, influencer campaigns, and digital content.
+2. **Event Marketing**: $3 million (20%) – Sponsorships, event organization, and travel.
+3. **Public Relations and Brand Awareness**: $2 million (13%) – Press releases, media engagements, and sponsorships.
+4. **Customer Retention**: $1 million (7%) – Email marketing, customer loyalty programs, and CRM tools.
+5. **Market Research and Analytics**: $2 million (13%) – Market research, surveys, and customer analytics.
+2025-06-30 19:33:43 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, User Query: Total sick leaves in a year
+2025-06-30 19:33:45 INFO VectorDB for executive fetched - success
+2025-06-30 19:33:45 INFO Retriever for executive fetched - success
+2025-06-30 19:33:48 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, AI Response: Employees are entitled to 12 days of sick leave per year, which is non-cumulative. If you need more information regarding sick leave or the application process, feel free to ask!
+2025-06-30 19:33:52 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, User Query: High level architecture
+2025-06-30 19:33:53 INFO VectorDB for executive fetched - success
+2025-06-30 19:33:53 INFO Retriever for executive fetched - success
+2025-06-30 19:34:02 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, AI Response: The high-level architecture of FinSolve consists of several key components:
+
+1. **Client Applications**
+   - Mobile Apps (iOS, Android)
+   - Web App (React)
+   - APIs (REST, GraphQL)
+
+2. **API Gateway**
+   - AWS API Gateway for routing, authentication, and rate limiting.
+
+3. **Microservices Layer**
+   - Authentication Service (OAuth 2.0, JWT)
+   - Payment Processing Service
+   - Wealth Management Service
+   - Analytics Service
+   - Notification Service
+
+4. **Data Layer**
+   - PostgreSQL for transactional data
+   - MongoDB for user profiles and metadata
+   - Redis for caching and session management
+   - Amazon S3 for documents and backups
+
+5. **Infrastructure**
+   - AWS (EC2, ECS, Lambda)
+   - Kubernetes for orchestration
+   - Cloudflare for CDN and DDoS protection
+
+This architecture is designed to be scalable, resilient, and secure, supporting rapid feature development and integration with third-party financial systems. If you have specific questions or need more details about any component, let me know!
+2025-06-30 19:34:06 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, User Query: 2024 marketing budget
+2025-06-30 19:34:08 INFO VectorDB for executive fetched - success
+2025-06-30 19:34:08 INFO Retriever for executive fetched - success
+2025-06-30 19:34:15 INFO session_id: 6a289f00-e780-4c12-ad62-bc5cee0ece59, AI Response: The total marketing budget for 2024 was $15 million, allocated as follows:
+
+1. **Digital Marketing**: $7 million (47%) – Focused on paid ads, influencer campaigns, and digital content.
+2. **Event Marketing**: $3 million (20%) – Included sponsorships, event organization, and travel.
+3. **Public Relations and Brand Awareness**: $2 million (13%) – Covered press releases, media engagements, and sponsorships.
+4. **Customer Retention**: $1 million (7%) – Focused on email marketing, customer loyalty programs, and CRM tools.
+5. **Market Research and Analytics**: $2 million (13%) – For market research, surveys, and customer analytics.
+
+If you have any further questions about the budget or its allocations, feel free to ask!
+2025-06-30 21:39:41 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:40:47 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:41:12 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:41:43 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:42:16 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:42:58 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:43:15 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:44:11 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:45:07 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:45:30 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:46:17 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:47:05 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:48:06 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:48:43 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 21:50:09 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:09:16 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:09:55 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:11:49 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:12:10 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:12:42 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:13:12 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:20:02 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:20:29 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-06-30 23:21:05 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)

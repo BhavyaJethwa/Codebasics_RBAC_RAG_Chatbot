@@ -1,5 +1,6 @@
 from math import floor
 
+# Function to trim chat message history used in database.py
 def trim_chat_history(chat_history):
     n = len(chat_history)
     if n == 0:

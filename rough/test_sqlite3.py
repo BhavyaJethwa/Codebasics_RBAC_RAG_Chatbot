@@ -4,7 +4,7 @@ conn = sqlite3.connect('../FinSolve.db')
 cursor = conn.cursor()
 
 cursor.execute(
-    "SELECT * FROM roles"
+    "SELECT * FROM users"
 )
 rows = cursor.fetchall()
 

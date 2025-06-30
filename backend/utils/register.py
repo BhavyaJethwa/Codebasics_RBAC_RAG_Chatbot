@@ -6,7 +6,7 @@ import sqlite3
 bcrypt = CryptContext(schemes=["bcrypt"], deprecated="auto")
 security = HTTPBasic()
 
-
+# Function to register users.
 def register_user(name:str, username: str, password: str, role: str):
     hashed_password = bcrypt.hash(password)
     with get_db_connection() as conn:
@@ -19,7 +19,8 @@ def register_user(name:str, username: str, password: str, role: str):
             conn.commit()
         except sqlite3.IntegrityError:
             raise HTTPException(status_code=409, detail="Username already exists")
-        
+
+#Function to reset password  
 def reset_password(username: str, new_password: str):
     conn = get_db_connection()
     cursor = conn.cursor()

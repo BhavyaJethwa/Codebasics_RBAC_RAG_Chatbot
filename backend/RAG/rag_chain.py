@@ -3,15 +3,6 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from RAG.get_retriever import get_retriever_by_role
-import logging
-logging.basicConfig(filename='rag_chain.log',
-                    format="%(asctime)s %(levelname)s %(message)s",
-                    datefmt="%Y-%m-%d %H:%M:%S", 
-                    filemode="a",
-                    level=logging.INFO)
-# Suppress HTTP request logs from libraries like httpcore/httpx/openai
-for noisy_logger in ["httpx", "https", "httpcore", "openai"]:
-    logging.getLogger(noisy_logger).setLevel(logging.WARNING)
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -37,7 +28,7 @@ qa_prompt = ChatPromptTemplate.from_messages([
     MessagesPlaceholder(variable_name="chat_history"),
     ("human", "{input}")])
 
-
+#Creating RAG Chain according to role. Default settings are model="gpt-4o-mini" and role="employee"
 def rag_chain_by_role(model="gpt-4o-mini", role="employee"):
     llm = ChatOpenAI(model=model)
     retriever = get_retriever_by_role(role)

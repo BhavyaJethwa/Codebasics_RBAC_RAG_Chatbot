@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import CSVLoader, PyPDFLoader, UnstructuredWordDocumentLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from datetime import datetime
 from langchain.schema import Document
+
 
 # ------------------ Loaders with Splitters ------------------
 

@@ -5,6 +5,7 @@ from schemas.PasswordReset import PasswordReset
 
 router = APIRouter(tags=["Auth"])
 
+#Login API
 @router.get("/login", status_code=status.HTTP_200_OK)
 def login(user=Depends(authenticate)):
     if not user:
@@ -15,6 +16,7 @@ def login(user=Depends(authenticate)):
         "is_admin": user["role"] == "admin"
     }
 
+#Password reset API
 @router.post("/reset_password", status_code=status.HTTP_200_OK)
 def reset_user_password(reset: PasswordReset, user=Depends(authenticate)):
     if user["role"] != "admin":

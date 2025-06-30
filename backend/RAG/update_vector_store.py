@@ -15,7 +15,7 @@ for noisy_logger in ["httpx", "https", "httpcore", "openai"]:
 
 
 
-
+#Loading documents according to a specific role. 
 def load_documents_by_role(role: str):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -30,35 +30,35 @@ def load_documents_by_role(role: str):
     base_path = "resources/data"
     path = os.path.join(base_path, folder_name)
 
-    print("Loading from path:", path)
+    logging.info("Loading from path:", path)
 
     docs = []
 
     if not os.path.exists(path):
-        print(f"Path does not exist: {path}")
+        logging.info(f"Path does not exist: {path}")
         return docs  
 
     for file_name in os.listdir(path):
         file_path = os.path.join(path, file_name)
-        print("file_path:", file_path)
+        logging.info("file_path:", file_path)
 
         try:
             loaded_docs = []
             if file_name.endswith(".csv"):
                 loaded_docs = load_csv(file_path)
-                print(file_name, "CSV Documents loaded:", file_path)
+                logging.info(file_name, "CSV Documents loaded:", file_path)
             elif file_name.endswith(".md"):
                 loaded_docs = load_markdown(file_path)
-                print(file_name, "MD Documents loaded:", file_path)
+                logging.info(file_name, "MD Documents loaded:", file_path)
             elif file_name.endswith(".txt"):
                 loaded_docs = load_text(file_path)
-                print(file_name, "Text Documents loaded:", file_path)
+                logging.info(file_name, "Text Documents loaded:", file_path)
             elif file_name.endswith(".pdf"):
                 loaded_docs = load_pdf(file_path)
-                print(file_name, "PDF Documents loaded:", file_path)
+                logging.info(file_name, "PDF Documents loaded:", file_path)
             elif file_name.endswith(".docx"):
                 loaded_docs = load_docx(file_path)
-                print(file_name, "Word Documents loaded:", file_path)
+                logging.info(file_name, "Word Documents loaded:", file_path)
             else:
                 continue
 
@@ -69,12 +69,12 @@ def load_documents_by_role(role: str):
             docs.extend(loaded_docs)
 
         except Exception as e:
-            print(f"Failed to load {file_path}: {e}")
+            logging.info(f"Failed to load {file_path}: {e}")
 
-    print("Total docs loaded:", len(docs))
+    logging.info("Total docs loaded:", len(docs))
     return docs
 
-
+#Updating vector store if new document is added.
 def update_vector_store_by_role(role):
     docs = load_documents_by_role(role)
     roles = get_roles()

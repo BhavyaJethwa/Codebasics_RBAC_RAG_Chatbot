@@ -11,15 +11,13 @@ logging.basicConfig(filename='app.log',
                     datefmt="%Y-%m-%d %H:%M:%S", 
                     filemode="a",
                     level=logging.INFO)
+
 logging.getLogger("passlib").setLevel(logging.ERROR)
 
 # Suppress HTTP request logs from libraries like httpcore/httpx/openai
 for noisy_logger in ["httpx", "https", "httpcore", "openai"]:
     logging.getLogger(noisy_logger).setLevel(logging.WARNING)
-import warnings
 
-# Suppress passlib bcrypt version warnings
-warnings.filterwarnings("ignore", message=".*(trapped) error reading bcrypt version*")
 
 
 from passlib.context import CryptContext
@@ -31,18 +29,19 @@ DB_PATH = "../FinSolve.db"
 admin_username = os.getenv("ADMIN_USERNAME", "Admin")
 admin_password = os.getenv("ADMIN_PASSWORD", "adminpass")
     
-
+# To get database connection object.
 def get_db_connection():
     return sqlite3.connect(DB_PATH)
 
 
-
+# Intializing database.
 def init_db():
     create_users()
     create_application_logs()
     create_roles()
     insert_user(name="Admin",username=admin_username,password=admin_password, role="admin")
 
+# Function to create users table
 def create_users():
     conn = get_db_connection()
     conn.execute('''
@@ -58,6 +57,7 @@ def create_users():
     conn.close()
 
 
+#Function to create roles table
 def create_roles():
     conn = get_db_connection()
     conn.row_factory = sqlite3.Row
@@ -81,39 +81,7 @@ def create_roles():
     conn.commit()
     conn.close()
 
-def add_role(role, folder_name):
-    try:
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute("INSERT OR IGNORE INTO roles (role, folder_name) VALUES (?, ?)", (role, folder_name))
-        conn.commit()
-    except sqlite3.IntegrityError:
-        raise ValueError("Role already exists.")
-    finally:
-        conn.close()
-
-def insert_user(name:str, username: str, password: str, role: str):
-    hashed_password = bcrypt.hash(password)
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute(
-                "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)",
-                (name, username, hashed_password, role)
-            )
-            conn.commit()
-        except sqlite3.IntegrityError:
-            print("User already exists")
-            pass
-
-def get_roles():
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute("SELECT role FROM roles")
-    roles = [row[0] for row in cursor.fetchall()]
-    conn.close()
-    return roles
-
+#Function to create application log table used for chat history.
 def create_application_logs():
     conn = get_db_connection()
     conn.execute(
@@ -130,6 +98,34 @@ def create_application_logs():
     )
     conn.close()
 
+#Function to insert role to roles table
+def add_role(role, folder_name):
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("INSERT OR IGNORE INTO roles (role, folder_name) VALUES (?, ?)", (role, folder_name))
+        conn.commit()
+    except sqlite3.IntegrityError:
+        raise ValueError("Role already exists.")
+    finally:
+        conn.close()
+
+#Function to insert user into users table
+def insert_user(name:str, username: str, password: str, role: str):
+    hashed_password = bcrypt.hash(password)
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        try:
+            cursor.execute(
+                "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)",
+                (name, username, hashed_password, role)
+            )
+            conn.commit()
+        except sqlite3.IntegrityError:
+            print("User already exists")
+            pass
+
+#Function to insert into application log table (chat history)
 def insert_application_logs(session_id, user_query, llm_response):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -140,6 +136,16 @@ def insert_application_logs(session_id, user_query, llm_response):
     conn.commit()
     conn.close()
 
+# function to get all the roles from roles table
+def get_roles():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT role FROM roles")
+    roles = [row[0] for row in cursor.fetchall()]
+    conn.close()
+    return roles
+
+# Function to get chat history from application logs table.
 def get_chat_history(session_id):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -162,6 +168,8 @@ def get_chat_history(session_id):
     else:
         return trim_chat_history(messages)
 
+
+#Function to cleanup application logs tables every 4 hours.
 RETENTION_LIMIT = 10
 async def cleanup_old_chat_per_session():
     while True:

@@ -7,16 +7,19 @@ from RAG.update_vector_store import update_vector_store_by_role
 
 router = APIRouter(tags=["Roles"])
 
+# API to fetch roles from db.
 @router.get("/get_roles")
 def get_roles_from_db():
     roles = get_roles()
     return [{"role": role} for role in roles]
 
+#API to add role to the roles table.
 @router.post("/add_role", status_code=status.HTTP_201_CREATED)
 def add_role_to_db(role_: RoleCreate):
     add_role(role_.role, role_.folder_name)
     return {"message": f"Role '{role_.role}' with folder '{role_.folder_name}' added successfully."}
 
+#API to add docs according to the role and create directory and ingest the document to create and update vector store.
 @router.post("/add_docs_role")
 def add_docs_for_role(role: str = Form(...), files: List[UploadFile] = File(...)):
     conn = get_db_connection()

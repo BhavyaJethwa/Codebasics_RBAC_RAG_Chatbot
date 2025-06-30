@@ -7,6 +7,7 @@ import uuid, logging
 
 router = APIRouter(tags=["Chat"])
 
+#Chat API
 @router.post("/chat")
 def chat(ChatQuery: ChatRequest, user=Depends(authenticate)):
     if user["role"] != ChatQuery.role:
