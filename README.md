@@ -1,8 +1,8 @@
-# 🛡️ Codebasics RBAC + RAG Chatbot
+# Codebasics RBAC + RAG Chatbot
 
 A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmented Generation (RAG) for personalized responses, built with **FastAPI** and **Streamlit**. This project enables department-specific document search and chat functionality with robust authentication and authorization.
 
-## 📌 Features
+## Features
 
 - 🔐 **User Authentication**: Login and password management
 - 👥 **Role-Based Access Control**:
@@ -16,7 +16,7 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 - 🔄 **Password Reset**: Secure reset functionality
 - 📊 **Admin Dashboard**: View roles, users, and logs
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - 🐍 Python 3.11
 - ⚡ FastAPI (Backend API)
@@ -25,11 +25,25 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 - 🧠 LangChain + ChromaDB (Vector Store)
 - 🗃️ SQLite (Local database)
 
-## 🖥️ Architecture Diagram
+## Architecture Diagram
+
+### This architecture shows the frontend is interacting with the backend. 
+
 ![Architecture Diagram](Architecture.png)
 
 
-## 🚀 Getting Started
+
+## RAG diagram
+
+### This diagram shows how the files are converted into documents and then stored into a vector database as embeddings.
+
+![RAG diagram](RAG.png)
+
+
+
+
+
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -63,7 +77,7 @@ uvicorn main:app --reload
 streamlit run app.py
 ```
 
-## 🔐 Default Admin Credentials
+## Default Admin Credentials
 
 ```text
 Username: Admin
@@ -97,7 +111,7 @@ Password: adminpass
 └── README.md
 ```
 
-## 📚 Roles Supported
+## Roles Supported
 
 - admin
 - hr
@@ -126,12 +140,6 @@ You can create and assign more roles dynamically via the Admin panel.
 - `POST /reset_password` - Reset user password
 - `GET /get_roles` - Get list of roles
 
-## ✅ To-Do / Future Enhancements
-
-- [ ] JWT-based authentication
-- [ ] Email verification for password resets
-- [ ] Deployment using Docker & Nginx
-- [ ] Analytics Dashboard for Admins
 
 ## 🤝 Contributing
 
