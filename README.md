@@ -26,7 +26,8 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 - 🗃️ SQLite (Local database)
 
 ## 🖥️ Architecture Diagram
-![Architecture Diagram](\images\Architecture.jpg)
+![Architecture Diagram](Codebasics_RBAC_RAG_Chatbot/images
+/Architecture.jpg)
 
 
 ## 🚀 Getting Started
