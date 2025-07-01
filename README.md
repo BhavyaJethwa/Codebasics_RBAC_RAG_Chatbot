@@ -148,13 +148,13 @@ python -m RAG.ingestion
 
 ## Roles Supported
 
-- admin
-- hr
-- finance
-- marketing
-- engineering
-- general or employee
-- executive
+- **admin** (Access to everything)
+- **hr** (Access to Human Resource data)
+- **finance** (Access to Finance data)
+- **marketing** (Access to Marketing data)
+- **engineering** (Access to Engineering data)
+- **general or employee** (Access to General data)
+- **executive** (Access to all the data but doesnt have Admin privileges)
 
 You can create and assign more roles dynamically via the Admin panel.
 
