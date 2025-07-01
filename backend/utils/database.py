@@ -1,7 +1,7 @@
 import sqlite3
 import asyncio
 from utils.message_trimmer import trim_chat_history
-from datetime import datetime
+from datetime import datetime, timedelta
 import logging 
 import os
 from dotenv import load_dotenv
@@ -169,39 +169,27 @@ def get_chat_history(session_id):
         return trim_chat_history(messages)
 
 
-#Function to cleanup application logs tables every 4 hours.
-RETENTION_LIMIT = 10
+# Function to cleanup application logs older than 24 hours
 async def cleanup_old_chat_per_session():
     while True:
         try:
             conn = get_db_connection()
             cursor = conn.cursor()
 
-            # Get all session_ids
-            cursor.execute("SELECT DISTINCT session_id FROM application_logs")
-            session_ids = cursor.fetchall()
+            # Calculate the cutoff timestamp (24 hours ago)
+            cutoff_time = datetime.utcnow() - timedelta(hours=24)
 
-            total_deleted = 0
+            # Delete logs older than 24 hours
+            cursor.execute("""
+                DELETE FROM application_logs
+                WHERE created_at < ?
+            """, (cutoff_time,))
 
-            for (session_id,) in session_ids:
-                cursor.execute("""
-                    SELECT id FROM application_logs
-                    WHERE session_id = ?
-                    ORDER BY created_at DESC
-                    LIMIT -1 OFFSET ?
-                """, (session_id, RETENTION_LIMIT))
-
-                ids_to_delete = [row[0] for row in cursor.fetchall()]
-                if ids_to_delete:
-                    placeholders = ",".join(["?"] * len(ids_to_delete))
-                    query = f"DELETE FROM application_logs WHERE id IN ({placeholders})"
-                    cursor.execute(query, ids_to_delete)
-                    total_deleted += cursor.rowcount
-
+            deleted_count = cursor.rowcount
             conn.commit()
             conn.close()
 
-            logging.info(f"[Cleanup] Deleted {total_deleted} old messages (retained last {RETENTION_LIMIT}/session)")
+            logging.info(f"[Cleanup] Deleted {deleted_count} old messages older than 24 hours.")
         except Exception as e:
             logging.error(f"[Cleanup Error] {e}")
 

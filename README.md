@@ -29,7 +29,7 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 
 #### This architecture shows how the frontend is interacting with the backend. 
 
-![Architecture Diagram](Architecture.png)
+![Architecture Diagram](images/Architecture.png)
 
 
 
@@ -37,13 +37,13 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 
 #### Files are converted into documents and then stored into a vector database as embeddings.
 
-![RAG diagram](RAG.png)
+![RAG diagram](images/RAG.png)
 
 ## RAG CHAIN 
 
 #### This diagram shows how the RAG chain works
 
-![RAG CHAIN](RAG_CHAIN.png)
+![RAG CHAIN](images/RAG_CHAIN.png)
 
 
 ## Getting Started

@@ -11,7 +11,7 @@ def admin_sidebar():
     with st.sidebar:
         st.title("FinSolve Technologies")
         st.title(f"Hello {st.session_state.name} !")
-        st.markdown(f"{st.session_state.name}'s Role")
+        st.markdown("Your Role")
         st.info(st.session_state.role.capitalize())
 
         # Styled logout button

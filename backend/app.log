@@ -383,3 +383,8 @@ If you have any further questions about the budget or its allocations, feel free
 2025-06-30 23:20:02 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
 2025-06-30 23:20:29 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
 2025-06-30 23:21:05 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-07-01 03:21:05 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-07-01 08:30:46 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-07-01 12:30:48 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
+2025-07-01 15:27:03 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
+2025-07-01 15:27:15 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
