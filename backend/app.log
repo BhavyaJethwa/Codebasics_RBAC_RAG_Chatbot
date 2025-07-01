@@ -388,3 +388,6 @@ If you have any further questions about the budget or its allocations, feel free
 2025-07-01 12:30:48 INFO [Cleanup] Deleted 0 old messages (retained last 10/session)
 2025-07-01 15:27:03 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
 2025-07-01 15:27:15 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
+2025-07-01 19:31:14 INFO [Cleanup] Deleted 11 old messages older than 24 hours.
+2025-07-01 23:46:04 INFO [Cleanup] Deleted 4 old messages older than 24 hours.
+2025-07-02 00:14:26 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
