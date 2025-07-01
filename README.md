@@ -26,6 +26,7 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 2025-07-01 19:31:14 INFO [Cleanup] Deleted 11 old messages older than 24 hours.
 2025-07-01 23:46:04 INFO [Cleanup] Deleted 4 old messages older than 24 hours.
 
+## Here is a quick look at the Admin panel with all the features.
 ![Application](images/Application.png)
 
 ## Tech Stack
