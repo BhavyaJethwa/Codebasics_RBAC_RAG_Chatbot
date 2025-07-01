@@ -30,7 +30,6 @@ def chat(ChatQuery: ChatRequest, user=Depends(authenticate)):
     doc_len  = len(answer['context'])
     for i in range(0,doc_len):
         source_docs.append(answer['context'][i].metadata['source'].split("\\")[-1])
-        print(answer['context'][i].metadata['source'].split("\\")[-1])
 
     docs = list(set(source_docs))
 

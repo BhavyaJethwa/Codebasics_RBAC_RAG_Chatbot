@@ -23,8 +23,6 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 
 - **Memory management**: On backend startup, a clean-up script runs every 4 hours clearing chat history older than 24 hours leading to better memory management and cost (if ran on cloud).
 
-2025-07-01 19:31:14 INFO [Cleanup] Deleted 11 old messages older than 24 hours.
-2025-07-01 23:46:04 INFO [Cleanup] Deleted 4 old messages older than 24 hours.
 
 ## Here is a quick look at the Admin panel with all the features.
 ![Application](images/Application.png)
@@ -117,6 +115,11 @@ Password: adminpass
 cd backend
 python -m RAG.ingestion  
 ```
+
+## Once you are done with the setup, register a user for yourself and give it an appropriate role. After login in you can chat with the chatbot! You can also see the source document from which the answer was generated.
+
+![Example chat](images/Example_chat.png)
+
 
 ## 🗂️ Folder Structure
 

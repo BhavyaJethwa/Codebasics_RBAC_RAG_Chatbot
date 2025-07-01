@@ -391,3 +391,18 @@ If you have any further questions about the budget or its allocations, feel free
 2025-07-01 19:31:14 INFO [Cleanup] Deleted 11 old messages older than 24 hours.
 2025-07-01 23:46:04 INFO [Cleanup] Deleted 4 old messages older than 24 hours.
 2025-07-02 00:14:26 INFO [Cleanup] Deleted 0 old messages older than 24 hours.
+2025-07-02 00:40:57 INFO session_id: 3aefbca9-e854-4c12-b828-6e07bf10abc9, User Query: What was the total marketing budget for 2024?
+2025-07-02 00:41:05 INFO Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-02 00:41:06 INFO VectorDB for executive fetched - success
+2025-07-02 00:41:06 INFO Retriever for executive fetched - success
+2025-07-02 00:41:11 INFO session_id: 3aefbca9-e854-4c12-b828-6e07bf10abc9, AI Response: The total marketing budget for 2024 was $15 million.
+2025-07-02 00:41:37 INFO session_id: 3aefbca9-e854-4c12-b828-6e07bf10abc9, User Query: How was it allocated?
+2025-07-02 00:41:40 INFO VectorDB for executive fetched - success
+2025-07-02 00:41:40 INFO Retriever for executive fetched - success
+2025-07-02 00:41:46 INFO session_id: 3aefbca9-e854-4c12-b828-6e07bf10abc9, AI Response: The marketing budget of $15 million for 2024 was allocated as follows:
+
+1. **Digital Marketing**: $7 million (47%) – Focused on paid ads, influencer campaigns, and digital content.
+2. **Event Marketing**: $3 million (20%) – Sponsorships, event organization, and travel.
+3. **Public Relations and Brand Awareness**: $2 million (13%) – Press releases, media engagements, and sponsorships.
+4. **Customer Retention**: $1 million (7%) – Email marketing, customer loyalty programs, and CRM tools.
+5. **Market Research and Analytics**: $2 million (13%) – Market research, surveys, and customer analytics.
