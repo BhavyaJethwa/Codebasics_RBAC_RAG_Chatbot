@@ -33,7 +33,7 @@ A secure, role-based access control (RBAC) chatbot system using Retrieval-Augmen
 - FastAPI (Backend API)
 - Streamlit (Frontend UI)
 - passlib (Password Hashing)
-- LangChain (Document loading and splitting) 
+- LangChain (Document loading and splitting and RAG chain) 
 - ChromaDB (Vector Store)
 - OpenAI (LLM and Embeddings)
 - SQLite (Database)
